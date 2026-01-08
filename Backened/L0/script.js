@@ -61,4 +61,4 @@ for(let i =0; i<5; i++){
 // let, const -> block scope
 
 
-namaste js channel 
+//namaste js channel 
