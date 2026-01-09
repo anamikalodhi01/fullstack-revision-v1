@@ -1,0 +1,7 @@
+npm init -y
+npm i express @4            // then version 4 will isntall
+npm i express               // then latest version
+
+? ke bd wla part rotes ka part nhi h
+static routing, dynamic routing,
+client side rendering, server side rendering
