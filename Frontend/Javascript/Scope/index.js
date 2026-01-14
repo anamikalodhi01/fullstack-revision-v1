@@ -63,7 +63,92 @@ let b = 100;                      // hoisted separately in memory space
     console.log(b);             // 20
     console.log(c);        
 }
-console.log(b);                 // 100
+console.log(b);                 // 100       // same in const also
+
+
+// shadowing is not only concept of block but also in function scope
+
+const ca = 100;
+function test(){
+    const ca = 30;   
+    console.log(ca);      // 30
+}   
+test();
+console.log(ca);          // 100
+
+var c = 100;
+function x(){
+    var c = 50;
+    console.log(window.c);
+    window.c = 20;
+}
+x();                     // 100     // accessing global variable using window object
+console.log(c);          // 20      // modified global variable
+
+
+// Illegal shadowing
+
+var a = 20;
+{
+    var a = 20;                   // can shadow only if both are var
+}
+
+
+let a = 20;
+{
+    var a = 20;                   // can not shadow giv error a has already been declared, can not cross boundary 
+}
+
+var a = 20;
+{
+    let a = 20;                    // can shadow js cannot give error
+}
+
+
+// can shadow using let and let but not let and var
+
+
+// Lexical Scope :- it is a type of scope that is determined by the physical structure of the code
+// in lexical scope inner function can access variable of outer function but outer function can not access variable of inner function
+
+const a = 20;
+{
+    const a = 100;
+    {
+        const a = 200;
+        console.log(a);         // 200
+    }
+}
+
+
+const a = 20;
+{
+    const a = 100;
+    {
+        const a = 200;
+    }
+    console.log(a);             // 100
+}
+
+const a = 20;
+{
+    const a = 100;
+    {
+        const a = 200;
+    }
+}
+console.log(a);                 // 20
+
+
+const a = 20;
+{
+    const a = 100;
+    {
+        console.log(a);         // 100
+    }
+}
+
+
 
 
 
