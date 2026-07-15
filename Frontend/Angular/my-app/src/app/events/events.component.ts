@@ -8,8 +8,16 @@ import { Component } from '@angular/core';
 })
 export class EventsComponent {
 
-  handleEvent(event: MouseEvent){
+  // handleEvent(event: MouseEvent){
+  //   console.log("Event handled", event.type);
+  //   console.log("Event target", (event.target as Element).className);
+  // }
+
+   handleEvent(event: Event){
     console.log("Event handled", event.type);
-    console.log("Event target", (event.target as Element).className);
+    console.log("value", (event.target as HTMLInputElement).value);
+
   }
+
+
 }

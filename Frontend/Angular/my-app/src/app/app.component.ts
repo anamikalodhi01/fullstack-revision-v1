@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
-
+import { IfelseComponent } from './ifelse/ifelse.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EventsComponent } from './events/events.component';
+import { GetandsetinpfieldvalComponent } from './getandsetinpfieldval/getandsetinpfieldval.component';
+import { StyleoptionComponent } from './styleoption/styleoption.component';
 
 
 @Component({
   selector: 'app-root',
-  imports: [LoginComponent, SignupComponent, ProfileComponent, EventsComponent],
+  imports: [ IfelseComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styles : [`h1{ color: red; }`]
 })
 export class AppComponent {
   // title = 'my-app'; knwon as properties do not define using const or let class ke adr prop bhr variable 
