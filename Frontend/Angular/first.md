@@ -96,7 +96,56 @@ performing any action on ui is known as event
 
 ```
   handleEvent(event: any){
-    console.log("Event handled", event.type);
-    console.log("Event target", (event.target as Element).className);
+    console.log("Event handled", event.type);      // event handled click
+    console.log("Event target", (event.target as Element).className);    // event target bttn
+      console.log("Event target", event.target);    // pura div miljayega
   }
 ```
+
+> mouseevent, mouseleave, blur, focus
+
+## Get and Set Input field Value
+> Make input field pass and function
+> Get value with event
+> Get value with template reference variable
+
+### Eg of get value
+```
+export class GetandsetinpfieldvalComponent {
+  name = ""
+  getName(event: Event){
+    this.name = (event.target as HTMLInputElement).value;
+    
+  }
+}
+
+```
+<h1>Get and Set Input Field Value</h1>
+<h1>{{name}}</h1>
+<input type="text" (input)="getName($event)" placeholder="Enter user name">
+<br><br>
+<button>Get Value</button>
+```
+
+### Eg of set value
+```
+  setName(){
+    this.name = "Sam";
+  }
+```
+
+```
+<button (click)="setName()">Set Name</button>
+```
+
+## Style Option
+har component ke liye alg style file main style krna pdega 
+
+## If Else Condition
+We can put condition in both files in ts it is same as js but in html it is diff
+
+> if else and else if both are diff becoz there is only two condition in if else but there can be multiples in else if 
+
+
+
+
